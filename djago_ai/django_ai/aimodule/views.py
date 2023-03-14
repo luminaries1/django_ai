@@ -36,6 +36,7 @@ class_label = ['airplane', 'alarm_clock', 'ambulance', 'angel', 'ant', 'anvil', 
 @api_view(['POST'])
 def ai_post(request):
     draw = request.data['drawing']
+    print(draw)
     # for문 3번 쓰는거 numpy 활용해서 바꿀 생각 하기.
     for i in range(len(draw)):
         for j in range(len(draw[i])):
@@ -50,11 +51,11 @@ def ai_post(request):
     # plt.show()
     img = np.array(img.resize((64,64))) 
     img = img.reshape(64,64,1)
-    # print(model.predict(np.array([img])))
-    # print(class_label[np.argmax(model.predict(np.array([img])))])
+    print(model.predict(np.array([img])))
+    print(class_label[np.argmax(model.predict(np.array([img])))])
     prediction_arr = model.predict(np.array([img]))[0]
     prediction_first_index = np.argmax(prediction_arr)
-    # print(prediction_arr)
+    print(prediction_arr)
     prediction_second_index = np.argsort(prediction_arr, axis=0 )[-2]
     prediction_first_label = class_label[prediction_first_index]
     predict_prob_first = prediction_arr[prediction_first_index] * 100
