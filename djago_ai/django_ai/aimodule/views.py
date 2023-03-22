@@ -23,10 +23,8 @@ kor_eng_dic_hard_coding = {"stairs":"계단","pig":"돼지","octopus":"문어","
 "toothpaste":"치약","river":"강","bee":"벌","cat":"고양이","duck":"오리","frog":"개구리","bandage":"붕대","bread":"빵","cactus":"선인장","cello":"첼로","dog":"개","floor lamp":"램프","hot dog":"핫도그","hamburger":"햄버거","skyscraper":"빌딩","train":"기차","table":"테이블","parachute":"낙하산","remote control":"리모콘","sheep":"양","sock":"양말",
 "traffic light":"신호등","shark":"상어","bicycle":"자전거","chair":"의자","elephant":"코끼리","giraffe":"기린","baseball bat":"야구방망이","broccoli":"브로콜리","cake":"케이크","church":"교회","dolphin":"돌고래","face":"얼굴","house":"집","leaf":"나뭇입","fence":"울타리","tree":"나무","octagon":"팔각형","passport":"여권","paper clip":"클립","zebra":"얼룩말","spider":"거미",
 "watermelon":"수박","shoe":"신발","hospital":"병원","kangaroo":"캥거루","horse":"말","grapes":"포도","bat":"박쥐","bucket":"양동이","calculator":"계산기","circle":"원","donut":"도넛","feather":"깃털","ice cream":"아이스크림","leg":"다리","finger":"손가락","triangle":"삼각형","sword":"칼","peanut":"땅콩","panda":"판다","star":"별","spoon":"숟가락",
-"whale":"고래","snail":"달팽이","key":"열쇠","laptop":"노트북","lion":"사자","microphone":"마이크","bathtub":"욕조","bird":"새","calendar":"달력","candle":"양초","door":"문","drill":"드릴","jacket":"재킷","light bulb":"전구","grass":"잔디","umbrella":"우산","t-shirt":"티셔츠","rhinoceros":"코뿔소","roller coaster":"롤러코스터","steak":"스테이크","sun":"태양",
+"whale":"고래","snail":"달팽이","key":"열쇠","laptop":"노트북","lion":"사자","microphone":"마이크","bathtub":"욕조","bird":"새","calendar":"달력","candle":"양초","toe":"발가락","drill":"드릴","jacket":"재킷","light bulb":"전구","grass":"잔디","umbrella":"우산","t-shirt":"티셔츠","rhinoceros":"코뿔소","roller coaster":"롤러코스터","steak":"스테이크","sun":"태양",
 "broom":"빗자루","snake":"뱀","monkey":"원숭이","mountain":"산","mushroom":"버섯","ocean":"바다","beach":"해변","bus":"버스","camel":"낙타","cannon":"대포","dragon":"용","crayon":"크레파스","jail":"감옥","lightning":"벼락","guitar":"기타","mouse":"쥐","oven":"오븐","penguin":"펭귄","sandwich":"샌드위치","submarine":"잠수함","swan":"백조"}
-
-
 
 
 model = load_model('./model_dir/resnet_model.h5')
@@ -45,7 +43,7 @@ def make_img(img_arr) :
     return image 
 
 
-class_label = ['cake', 'paintbrush', 'ear', 'sink', 'sock', 'nail', 'frog', 'paper_clip', 'book', 'skull', 'candle', 'sun', 'hospital', 'river', 'pants', 'soccer_ball', 'beach', 'headphones', 'church', 'brain', 'fish', 'piano', 'belt', 'moon', 'grass', 'toothbrush', 'hand', 'dragon', 'diamond', 'ant', 'foot', 'pond', 'computer', 'finger', 'tree', 'ladder', 'scissors', 'penguin', 'strawberry', 'cactus', 'helicopter', 'chair', 'rainbow', 'microphone', 'bear', 'bee', 'sheep', 'tiger', 'map', 'necklace', 'clock', 'cell_phone', 'camera', 'pencil', 't-shirt', 'oven', 'bathtub', 'axe', 'horse', 'knee', 'harp', 'jail', 'baseball_bat', 'floor_lamp', 'whale', 'beard', 'apple', 'compass', 'traffic_light', 'leg', 'submarine', 'mushroom', 'snowflake', 'flower', 'leaf', 'couch', 'fence', 'envelope', 'mountain', 'bandage', 'mouse', 'elephant', 'shark', 'pig', 'spider', 'lipstick', 'pizza', 'hammer', 'tooth', 'hot_dog', 'bird', 'snowman', 'lion', 'dolphin', 'streetlight', 'scorpion', 'umbrella', 'stairs', 'cookie', 'wine_glass', 'angel', 'canoe', 'wheel', 'hamburger', 'train', 'banana', 'sandwich', 'crab', 'calendar', 'lightning', 'crown', 'radio', 'dog', 'cow', 'kangaroo', 'toothpaste', 'mosquito', 'cloud', 'castle', 'bat', 'passport', 'guitar', 'camouflage', 'carrot', 'feather', 'rabbit', 'bush', 'table', 'hedgehog', 'nose', 'star', 'cup', 'grapes', 'cannon', 'windmill', 'drill', 'calculator', 'rhinoceros', 'cooler', 'bread', 'fork', 'skyscraper', 'zebra', 'bus', 'boomerang', 'light_bulb', 'broom', 'blueberry', 'remote_control', 'circle', 'butterfly', 'bicycle', 'laptop', 'ice_cream', 'shoe', 'speedboat', 'key', 'firetruck', 'house', 'panda', 'pineapple', 'elbow', 'raccoon', 'octagon', 'crayon', 'cello', 'motorbike', 'watermelon', 'camel', 'peanut', 'eyeglasses', 'owl', 'potato', 'arm', 'backpack', 'pillow', 'swan', 'matches', 'giraffe', 'bed', 'ocean', 'car', 'keyboard', 'rain', 'bracelet', 'face', 'duck', 'jacket', 'monkey', 'roller_coaster', 'donut', 'sword', 'mouth', 'hat', 'crocodile', 'dishwasher', 'spoon', 'snail', 'purse', 'steak', 'airplane', 'eraser', 'cat', 'parachute', 'bucket', 'onion', 'snake', 'screwdriver', 'triangle', 'door', 'octopus', 'tornado', 'broccoli', 'saw']
+class_label =  ['cake', 'paintbrush', 'ear', 'sink', 'sock', 'nail', 'frog', 'paper clip', 'book', 'skull', 'candle', 'sun', 'hospital', 'river', 'pants', 'soccer ball', 'beach', 'headphones', 'church', 'brain', 'fish', 'piano', 'belt', 'moon', 'grass', 'toothbrush', 'hand', 'dragon', 'diamond', 'ant', 'foot', 'pond', 'computer', 'finger', 'tree', 'ladder', 'scissors', 'penguin', 'strawberry', 'cactus', 'helicopter', 'chair', 'rainbow', 'microphone', 'bear', 'bee', 'sheep', 'tiger', 'map', 'necklace', 'clock', 'cell phone', 'camera', 'pencil', 't-shirt', 'oven', 'bathtub', 'axe', 'horse', 'knee', 'harp', 'jail', 'baseball bat', 'floor lamp', 'whale', 'beard', 'apple', 'compass', 'traffic light', 'leg', 'submarine', 'mushroom', 'snowflake', 'flower', 'leaf', 'couch', 'fence', 'envelope', 'mountain', 'bandage', 'mouse', 'elephant', 'shark', 'pig', 'spider', 'lipstick', 'pizza', 'hammer', 'tooth', 'hot dog', 'bird', 'snowman', 'lion', 'dolphin', 'streetlight', 'scorpion', 'umbrella', 'stairs', 'cookie', 'wine glass', 'angel', 'canoe', 'wheel', 'hamburger', 'train', 'banana', 'sandwich', 'crab', 'calendar', 'lightning', 'crown', 'radio', 'dog', 'cow', 'kangaroo', 'toothpaste', 'mosquito', 'cloud', 'castle', 'bat', 'passport', 'guitar', 'carrot', 'feather', 'rabbit', 'bush', 'table', 'nose', 'star', 'cup', 'grapes', 'cannon', 'windmill', 'drill', 'calculator', 'rhinoceros', 'bread', 'fork', 'skyscraper', 'zebra', 'bus', 'boomerang', 'light bulb', 'broom', 'blueberry', 'remote control', 'circle', 'butterfly', 'bicycle', 'laptop', 'ice cream', 'shoe', 'key', 'firetruck', 'house', 'panda', 'pineapple', 'elbow', 'raccoon', 'octagon', 'crayon', 'cello', 'watermelon', 'camel', 'peanut', 'eyeglasses', 'owl', 'potato', 'picture frame', 'arm', 'backpack', 'pillow', 'swan', 'matches', 'giraffe', 'bed', 'ocean', 'car', 'keyboard', 'rain', 'bracelet', 'face', 'duck', 'toe', 'jacket', 'monkey', 'roller coaster', 'donut', 'sword', 'mouth', 'hat', 'crocodile', 'dishwasher', 'spoon', 'snail', 'purse', 'steak', 'airplane', 'eraser', 'cat', 'parachute', 'bucket', 'onion', 'snake', 'screwdriver', 'triangle', 'door', 'octopus', 'tornado', 'broccoli', 'saw']
 # class_label = ['airplane', 'alarm clock', 'ambulance', 'angel', 'ant', 'anvil', 'apple', 'arm', 'asparagus', 'axe', 'backpack']
 
 
@@ -91,17 +89,24 @@ def ai_post(request):
     prediction_first_index = np.argmax(prediction_arr)
     prediction_second_index = np.argsort(prediction_arr, axis=0 )[-2]
     prediction_first_label = class_label[prediction_first_index]
+    prediction_second_label = class_label[prediction_second_index]
     predict_prob_first = prediction_arr[prediction_first_index] * 100
-    
+
     if kor_eng_dic_hard_coding.get(prediction_first_label):
         prediction_first_label = kor_eng_dic_hard_coding.get(prediction_first_label)
 
+    if kor_eng_dic_hard_coding.get(prediction_second_label):
+        prediction_second_label = kor_eng_dic_hard_coding.get(prediction_second_label)
+
     if predict_prob_first >= 70 :
+        if prediction_first_label == 'cooler':
+            prediction_first_label = prediction_second_label
         return Response(data={'predictionType' : 0, 'firstPrediction' : prediction_first_label , 'secondPrediction' : ''}, status=status.HTTP_200_OK)
     elif 70 > predict_prob_first >= 45:
-        prediction_second_label = class_label[prediction_second_index]
-        if kor_eng_dic_hard_coding.get(prediction_second_label):
-            prediction_second_label = kor_eng_dic_hard_coding.get(prediction_second_label)
+        if prediction_first_label == 'cooler':
+            prediction_first_label = prediction_second_label
+        elif prediction_second_label == 'cooler':
+            return Response(data={'predictionType' : 0, 'firstPrediction' : prediction_first_label , 'secondPrediction' : ''}, status=status.HTTP_200_OK)
         return Response(data={'predictionType' : 1, 'firstPrediction' : prediction_first_label , 'secondPrediction' : prediction_second_label}, status=status.HTTP_200_OK)
     elif 45> predict_prob_first:
         return Response(data={'predictionType' : 2, 'firstPrediction' : '' , 'secondPrediction' : ''}, status=status.HTTP_200_OK)
