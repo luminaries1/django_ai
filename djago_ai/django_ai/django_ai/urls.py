@@ -23,6 +23,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ai/', include('aimodule.urls')),
+    path('stt/', include('sttmodule.urls')),
 ]
 
 # 미디어파일 url 추가
