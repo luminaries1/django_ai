@@ -38,6 +38,6 @@ def audio_post(request):
         fs = FileSystemStorage()
         fs.delete(path)
         
-        return Response(data = {result_word})
+        return Response(data = result_word)
     else:
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
