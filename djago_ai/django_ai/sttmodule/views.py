@@ -98,6 +98,8 @@ def audio_post(request):
         sentence = vocab.label_to_string(y_hats.cpu().detach().numpy())
         print(sentence)
 
+        
+
 
         # ...
         dummy_word_lst = ['사과', '너구리', '수박', '쥐', '별', '번개', '달팽이' ]
@@ -107,6 +109,6 @@ def audio_post(request):
         fs = FileSystemStorage()
         fs.delete(path)
         
-        return Response(data = sentence)
+        return Response(data = sentence[0])
     else:
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
