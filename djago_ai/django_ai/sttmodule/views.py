@@ -660,8 +660,6 @@ def audio_post(request):
             y_hats = model.recognize(feature.unsqueeze(0), input_length)
 
         sentence = vocab.label_to_string(y_hats.cpu().detach().numpy())
-        print(sentence)
-
         # # ...
         dummy_word_lst = ['사과', '너구리', '수박', '쥐', '별', '번개', '달팽이' ]
         some_rand_int = random.randint(0,6)
@@ -669,16 +667,23 @@ def audio_post(request):
 
         min_distance = 50
         tmp_string = ''
-
-        print(type(sentence[0]), type(word_lst[3]))
+        sentence[0] = sentence[0].replace('!','')
+        sentence[0] = sentence[0].replace('?','')
+        sentence[0] = sentence[0].replace('@','')
+        sentence[0] = sentence[0].replace('#','')
+        sentence[0] = sentence[0].replace('$','')
+        sentence[0] = sentence[0].replace('/','')
+        sentence[0] = sentence[0].replace('%','')
+        sentence[0] = sentence[0].replace('.','')
+        sentence[0] = sentence[0].replace(' ','')
+        print(sentence[0])
         for word in word_lst:
-            print(sentence[0], word)
             tmp_distance = jamo_levenshtein(sentence[0], word)
             if tmp_distance < min_distance:
                 min_distance = tmp_distance
                 tmp_string = word
 
-        print(min_distance)
+        print(min_distance, tmp_string)
 
         fs = FileSystemStorage()
         fs.delete(path)
