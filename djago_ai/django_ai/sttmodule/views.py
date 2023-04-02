@@ -363,7 +363,7 @@ word_lst =["사과"
 ,"계단"
 ,"빨대"
 ,"가로등"
-,"TV"
+,"티브이"
 ,"칫솔"
 ,"치약"
 ,"신호등"
@@ -687,6 +687,9 @@ def audio_post(request):
 
         fs = FileSystemStorage()
         fs.delete(path)
+
+        if tmp_string == '티브이':
+            tmp_string = 'TV'
         
         return Response(data = tmp_string)
     else:
