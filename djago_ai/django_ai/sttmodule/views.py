@@ -670,7 +670,7 @@ def audio_post(request):
         min_distance = 50
         tmp_string = ''
 
-        print(sentence[0], word_lst[3])
+        print(type(sentence[0]), type(word_lst[3]))
         # for word in word_lst:
         #     tmp_distance = jamo_levenshtein(sentence[0], word)
         #     if tmp_distance < min_distance:
