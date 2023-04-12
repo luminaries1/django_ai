@@ -1,1 +1,2 @@
+*.pt filter=lfs diff=lfs merge=lfs -text
 *.{pt,h5,zip} filter=lfs diff=lfs merge=lfs -text

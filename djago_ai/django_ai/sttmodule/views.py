@@ -639,11 +639,11 @@ def audio_post(request):
         
 
         # 예측 파트
-        feature = parse_audio('/home/ubuntu/aimodule/djago_ai/django_ai/media/record.wav', del_silence=True)
+        feature = parse_audio('C:/Users/SSAFY/Desktop/gitlab/djago_ai/django_ai/media/record.wav', del_silence=True)
         input_length = torch.LongTensor([len(feature)])
-        vocab = KsponSpeechVocabulary('/home/ubuntu/aimodule/djago_ai/django_ai/sttmodule/label/ksponspeech_character_vocabs.csv')
+        vocab = KsponSpeechVocabulary('C:/Users/SSAFY/Desktop/gitlab/djago_ai/django_ai/sttmodule/label/ksponspeech_character_vocabs.csv')
 
-        model = torch.load('/home/ubuntu/aimodule/djago_ai/django_ai/sttmodule/model/model.pt', map_location=lambda storage, loc: storage).to('cpu')
+        model = torch.load('C:/Users/SSAFY/Desktop/gitlab/djago_ai/django_ai/sttmodule/model/model.pt', map_location=lambda storage, loc: storage).to('cpu')
         if isinstance(model, nn.DataParallel):
             model = model.module
         model.eval()
