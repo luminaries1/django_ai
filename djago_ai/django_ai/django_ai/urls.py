@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('ai/', include('aimodule.urls')),
     path('stt/', include('sttmodule.urls')),
+    path('tts/', include('sttmodule.urls')),
 ]
 
 # 미디어파일 url 추가
