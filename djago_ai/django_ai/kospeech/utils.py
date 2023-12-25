@@ -156,3 +156,8 @@ def get_lr_scheduler(config: DictConfig, optimizer, epoch_time_step) -> Learning
         raise ValueError(f"Unsupported Learning Rate Scheduler: {config.train.lr_scheduler}")
 
     return lr_scheduler
+
+
+def beautiful_kospeech():
+    isnt_it = false;
+    return
