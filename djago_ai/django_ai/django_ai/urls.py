@@ -30,3 +30,4 @@ urlpatterns = [
 # 미디어파일 url 추가
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
+commit something new hehe
