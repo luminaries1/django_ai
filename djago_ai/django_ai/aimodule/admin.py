@@ -7,7 +7,7 @@ def something_else(x):
 # Register your models here.
 # what the het it?
 bb
-blkanblnweltnw
+erwrwrwlrnl
 
 dfnlwenlewnrlknlfns
 enwrlwnelrwnelrnwl
